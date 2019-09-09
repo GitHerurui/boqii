@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>boqiilogin</title>
+    <link rel="stylesheet" href="../css/boqiilogin.css">
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <div class="content">
+                <ul>
+                    <li><a href="">波奇网</a></li>
+                    <li><a href="">波奇商城</a></li>
+                    <li><a href="">波奇服务</a></li>
+                    <li><a href="">波奇论坛</a></li>
+                    <li><a href="">波奇百科</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="body">
+            <div class="content">
+                <div class="logo-b">
+                    <a href="">
+                        <img src="../img/mainimg/logo2.png" alt="">
+                    </a>
+                    <h1>用户登录</h1>
+                    <div class="has_number">
+                        还没有波奇账号，<a href="./boqiireg.html">去注册</a>
+                    </div>
+                </div>
+
+                <div class="login_body">
+                    <form action="" method="post">
+                        <div class="login_l left">
+                            <a href="http://shop.boqii.com/zhuanti/1249.html" target="_blank">
+                                <img src="http://a.boqiicdn.com/Images/sitenew/login/log3.jpg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="login_r right">
+                            <div class="login_list-tab">
+                                <div class="login-list-tab" data-index="1">账号密码登录</div>
+                                <div class="login-list-tab curr" data-index="2">手机动态码登录</div>
+                            </div>
+                            <div class="login-by-passwd" style="display: none;">
+                                <div class="login_list"><em class="username"></em><input type="text" id="username"
+                                        tabindex="1" name="username" rel="账号不能为空" placeholder="输入用户名/邮箱/手机号"
+                                        class="login_username" style="color:#999;"></div>
+                                <div class="login_list"><em class="password"></em><input type="password" tabindex="2"
+                                        id="password" name="password" rel="密码不能为空"></div>
+                                <div class="forget_list" style="display:block">
+                                    <div class="yzm borderd"><span class="forget_list_yzmtxt">验证码：</span><input
+                                            type="text" id="m_verify" name="seccodeverify" class="w80" value="">
+                                        <div class="k_em">
+                                            <div class="tip err" id="m_verify_tip" style="display:none;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="image-code-box">
+                                        <canvas width="178px" height="50px"  id="captcha">               
+                                        </canvas>
+                                        <!-- <div class="form-group__message">验证码不能为空</div> -->
+                                    </div>
+                                    <!-- <div class="change" id="update_temps1"><a href="#">换一张</a></div> -->
+                                </div>
+                            </div>
+                            <div class="login-by-code" style="display: block;">
+                                <div class="login_list"><em class="username usermobile"></em><input type="text"
+                                        tabindex="1" id="userphone" name="userphone" rel="账号不能为空" placeholder="请输入手机号"
+                                        style="color:#999;"></div>
+                                <div class="login_list login-code"><input type="text" tabindex="1" id="usercode"
+                                        name="usercode" maxlength="8" rel="账号不能为空" placeholder="请输入短信验证码"
+                                        style="color:#999;"><a href="javascript:;" id="getLoginCode" class="">获取验证码</a>
+                                </div>
+                            </div>
+                            <div class="login-new-passwd">
+                                <div class="login_list"><em class="password"></em><input type="password" tabindex="2"
+                                        id="newpassword" name="password" minlength="6" maxlength="20" rel="密码不能为空"
+                                        placeholder="6-20大小写英文字母、数字或符号"></div>
+                            </div>
+                            <div id="login_tip" style="display:none" class="login_tip mt10"></div>
+                            <div class="login_text mt10"><label class="auto_login left"><input type="checkbox"
+                                        name="remember" id="remember"
+                                        checked="checked" tabindex="4"> 自动登录</label>
+                                <div class="operate right" style="display: none;"><a
+                                        href="http://www.boqii.com/user/forgot_password">忘记密码</a>　|　<a
+                                        href="http://www.boqii.com/user/register">免费注册</a></div>
+                            </div>
+                            <div class="login_btn mt15 a_login_password" style="display: none;"><a
+                                    href="javascript:void(0);" id="a_login">登 录</a></div>
+                            <div class="login_btn mt15 a_login_code" style="display: block;"><a
+                                    href="javascript:void(0);" id="a_login_code">登 录</a></div>
+                            <div class="other_body mt10">
+                                <div class="other_text"><span>使用合作网站帐号登录</span></div>
+                                <div class="other mt15"><a href="http://shop.boqii.com/alilogin.html">支付宝</a>　|　<a
+                                        href="https://api.weibo.com/oauth2/authorize?client_id=4030222662&amp;redirect_uri=http://shop.boqii.com/api/weibo/callback.php&amp;response_type=code">新浪微博</a>　|　<a
+                                        href="http://www.boqii.com/user/weixin.php">微信</a></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer_auto">
+                <div class="footer_bot">
+                    <p class="link"><a target="_blank" href="http://www.boqii.com/about.html">关于波奇</a><span>|</span><a
+                            target="_blank" href="http://www.boqii.com/link.html">友情链接</a><span>|</span><a
+                            target="_blank" href="http://www.boqii.com/joinus.html">诚聘英才</a><span>|</span><a
+                            target="_blank" href="http://www.boqii.com/contact.html">联系我们</a><span>|</span><a
+                            target="_blank" href="http://www.boqii.com/sitemap.html">网站地图</a><span>|</span><a
+                            target="_blank" href="http://www.boqii.com/complaints.html">意见反馈</a><span>|</span><a
+                            target="_blank" href="http://www.boqii.com/help.html">帮助中心</a><span>|</span>
+                        客服热线：400-820-6098
+                    </p>
+                    <p class="beian"><a target="_blank"
+                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502004955"><img
+                                src="http://a.boqiicdn.com/Images/public/beian.png" alt=""> 沪公网安备
+                            31011502004955号
+                        </a><span>|</span><a href="http://www.miibeian.gov.cn/"
+                            target="_blank">沪ICP备13034501号-2</a><span>|</span> &nbsp;增值电信业务经营许可证：
+                        <a href="http://www.miibeian.gov.cn/" target="_blank">沪B2-20140120</a></p>
+                    <p class="copy"> Copyright © 2007-2019 Boqii.com All Rights Reserved 光橙（上海）信息科技有限公司 版权所有
+
+                    </p>
+                    <p class="copy"> 公司地址：上海市浦东新区盛夏路399号亚芯科技园1号楼6楼<span>|</span>公司电话：021-61096226
+
+                    </p>
+                    <p><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20131022163114962"
+                            target="_blank" rel="nofollow"><img src="http://a.boqiicdn.com/Images/public/foot_gs.png"
+                                width="100" height="35"></a><a href="http://www.boqii.com/ads.php" target="_blank"
+                            rel="nofollow"><img src="http://a.boqiicdn.com/Images/public/foot_cx.png" width="100"
+                                height="35"></a><a
+                            href="https://ss.knet.cn/verifyseal.dll?sn=e14111831011556282oicb000000&amp;ct=df&amp;a=1&amp;pa=0.1636424780320953"
+                            target="_blank" rel="nofollow"><img src="http://a.boqiicdn.com/Images/public/foot_kx.png"
+                                width="100" height="35"></a><a href="http://www.zx110.org/" target="_blank"
+                            rel="nofollow"><img src="http://a.boqiicdn.com/Images/public/foot_zx.png" width="100"
+                                height="35"></a>
+                    </p>
+                    <p>如网民接到962110电话，请立即接听</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script src="../lib/jquery-3.4.1.js"></script>
+<script src="../lib/captcha.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/boqiilogin.js"></script>
+
+</html>

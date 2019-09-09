@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none
+}
+i,em{
+    display: inline-block;
+}
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+#box{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    width: 990px;
+    margin: auto;
+}
+header{
+    height: 37px;
+    line-height: 37px;
+    font-size: 14px;
+}
+header ul{
+    display: flex;
+}
+header ul li{
+    margin-right: 20px;
+}
+header ul li a{
+    color: #000000;
+    display: inline-block;
+    height: 100%;
+}
+header ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.body{
+    background: #f3f3f3;
+}
+.logo-b{
+    padding: 20px 0 15px;
+    display: flex;
+}
+.logo-b a img{
+    width: 190px;
+    height: 88px;
+}
+.logo-b h1{
+    height: 40px;
+    color: #666;
+    font: 24px/40px "Microsoft YaHei";
+    border-left: 1px solid #ccc;
+    padding: 0 0 0 10px;
+    margin: 25px 0 0 10px;
+}
+.has_number{
+    flex: 1;
+    text-align: right;
+    font-size: 12px;
+    height: 12px;
+    margin-top: 80px;
+}
+.has_number a{
+    color: #08d;
+}
+.has_number a:hover{
+    text-decoration: underline;
+}
+
+.login_body {
+    padding: 9px;
+    overflow: hidden;
+    background: #FFF;
+    border: 1px solid #DDD;
+}
+.login_l {
+    width: 480px;
+}
+.left {
+    display: inline;
+    float: left;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+img {
+    border: none;
+}
+.login_r {
+    width: 410px;
+    padding: 25px 35px 0 0;
+}
+.login_r {
+    width: 410px;
+    padding: 25px 35px 0 0;
+}
+.right {
+    display: inline;
+    float: right;
+}
+.login_list-tab {
+    border: 1px solid #ddd;
+    height: 48px;
+}
+.login_list-tab .login-list-tab:nth-child(1) {
+    border-right: 1px solid #ddd;
+}
+.login_list-tab .login-list-tab {
+    float: left;
+    width: 49.8%;
+    height: 45px;
+    border-bottom: 3px solid #fff;
+    text-align: center;
+    line-height: 49px;
+    font: 16px/38px "Microsoft YaHei";
+    color: #666;
+    cursor: pointer;
+}
+.login_list-tab .login-list-tab.curr {
+    border-bottom: 3px solid #f65;
+}
+.login_list {
+    border: 1px solid #ddd;
+    height: 48px;
+    padding: 0 13px 0 7px;
+    margin-top: -1px;
+}
+.login_list em.username {
+    background-position: 0 0;
+}
+.login_list em {
+    float: left;
+    width: 30px;
+    height: 24px;
+    background: url(/Images/sitenew/login/login.png) no-repeat;
+    margin: 12px 0 0;
+}
+.login_list input {
+    float: left;
+    width: 350px;
+    height: 28px;
+    padding: 10px 0 10px 7px;
+    font: 14px/28px "Microsoft YaHei";
+    color: #666;
+    border: none;
+}
+input {
+    outline: 0;
+}
+.login_list em.password {
+    background-position: -30px 0;
+}
+.login_body .login_r .yzm {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.yzm {
+    padding-left: 4px;
+}
+.borderd {
+    border: 1px solid #ddd;
+}
+.yzm {
+    float: left;
+    height: 38px;
+    padding: 0 10px;
+}
+.forget_list span {
+    float: left;
+    font: 16px/38px "Microsoft YaHei";
+    color: #666;
+    width: 100px;
+    text-align: right;
+}
+.forget_list_yzmtxt {
+    position: relative;
+    left: -3px;
+    top: 0px;
+}
+.yzm input {
+    float: left;
+    height: 28px;
+    padding: 5px 0;
+    font: 14px/28px "Microsoft YaHei";
+    border: none;
+    color: #666;
+}
+.w80 {
+    width: 80px;
+}
+.k_em {
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.yzm .tip.err {
+    background: url(../img/regloginimg/login.png) no-repeat -36px -33px;
+    border: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+.forget_list {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.tip.err {
+    color: #f65;
+    background: #ffebec;
+    border: 1px solid #ffbdbf;
+    padding: 4px 10px;
+    font-size: 12px;
+    width: 210px;
+    height: 15px;
+}
+.login_body .login_r .yzm {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.forget_list img {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+img {
+    border: none;
+}
+.login_body .login_r .change {
+    margin-top: 18px;
+}
+
+.change {
+    color: #08d;
+    cursor: pointer;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+.login_body .login_r .change a {
+    color: #1589DA;
+}
+.login_list em.usermobile {
+    background: url(../img/regloginimg/phone.png) no-repeat;
+}
+.login-by-code .login-code {
+    position: relative;
+}
+.login-by-code .login-code a {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 187px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    text-align: center;
+    color: #f65;
+    border: 1px solid #f65;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 12px;
+}
+.login-new-passwd {
+    display: none;
+}
+.login_list em.password {
+    background-position: -30px 0;
+}
+.login_list em {
+    float: left;
+    width: 30px;
+    height: 24px;
+    background: url(../img/regloginimg/login.png) no-repeat;
+    margin: 12px 0 0;
+}
+.login_list input {
+    float: left;
+    width: 350px;
+    height: 28px;
+    padding: 10px 0 10px 7px;
+    font: 14px/28px "Microsoft YaHei";
+    color: #666;
+    border: none;
+}
+.login_tip {
+    font-size: 12px;
+    color: #f65;
+    background: #ffebec;
+    border: 1px solid #ffbdbf;
+    padding: 7px 10px;
+}
+.login_text {
+    overflow: hidden;
+    font-size: 12px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+label {
+    cursor: default;
+}
+.operate {
+    color: #ccc;
+}
+.operate a {
+    color: #666;
+}
+.login_btn {
+    font: 24px/46px "Microsoft YaHei";
+    color: #fff;
+    background: #f65;
+    border: 1px solid #e35342;
+    text-align: center;
+    cursor: pointer;
+}
+.mt15 {
+    margin-top: 15px;
+}
+.login_btn a {
+    display: block;
+    height: 46px;
+    color: #fff;
+}
+.other_text {
+    border-bottom: 1px solid #ccc;
+    height: 14px;
+    line-height: 30px;
+}
+.other_text span {
+    color: #999;
+    background: #fff;
+    display: block;
+    width: 140px;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center;
+}
+.other {
+    text-align: center;
+    color: #ccc;
+}
+.other_text {
+    border-bottom: 1px solid #ccc;
+    height: 14px;
+    line-height: 30px;
+}
+.other a {
+    color: #666;
+    font-size: 12px;
+}
+.other a:hover{
+    color: red;
+}
+
+
+
+
+
+
+
+
+.footer_auto {
+    width: 990px;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer_bot {
+    padding: 20px 0;
+    position: relative;
+    font-size: 12px;
+}
+.footer_bot p.link {
+    color: #333;
+}
+.footer_bot a {
+    color: #333;
+    font-size: 12px;
+}
+.footer_bot a:hover{
+    text-decoration: underline;
+}
+.footer_bot p span {
+    padding: 0 8px;
+    color: #999;
+}
+.footer_bot p {
+    color: #666;
+    line-height: 22px;
+}
+.footer_bot .beian a {
+    position: relative;
+}
+.footer_bot .beian a img {
+    position: absolute;
+    left: -23px;
+    top: -14px;
+}
+.footer_bot p {
+    color: #666;
+    line-height: 22px;
+}
+.footer_bot img {
+    margin: 10px 10px 0 0;
+}
+
+.rightside {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 48px;
+}
+body,html{
+    scroll-behavior: smooth;
+  }
+  
+.rightside a {
+    display: block;
+    height: 48px;
+    background: url(../img/mainimg/btn.png) no-repeat;
+    margin-top: 1px;
+}
+.rightside a.r_dog {
+    background-position: 0 0;
+}
+.rightside a.r_cat {
+    background-position: 0 -49px;
+}
+.rightside a.r_small {
+    background-position: 0 -98px;
+}
+.rightside a.r_water {
+    background-position: 0 -147px;
+}
+.rightside a.r_reptile {
+    background-position: 0 -245px;
+}
+.rightside a.goTop {
+    background-position: 0 -196px;
+}
+.rightside a.r_dog:hover {
+    background-position: -52px 0;
+}
+.rightside a.r_cat:hover {
+    background-position: -52px -49px;
+}
+.rightside a.r_small:hover {
+    background-position: -52px -98px;
+}
+.rightside a.r_water:hover {
+    background-position: -52px -147px;
+}
+.rightside a.r_reptile:hover {
+    background-position: -52px -245px;
+}
+.rightside a.goTop:hover {
+    background-position: -52px -196px;
+}

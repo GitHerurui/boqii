@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>goodslist</title>
+    <link rel="stylesheet" href="../css/goodslist.css">
+    <script src="../lib/jquery-3.4.1.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/goodslist.js"></script>
+
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <div class="toolbar" id="top">
+                <div class="content toolbar-box">
+                    <ul class="toolbar-left">
+                        <li class="collect left">
+                            <em></em>
+                            <a href="" id="001">收藏波奇商城</a>
+                        </li>
+                        <li class="city">
+                            <div class="city_l">
+                                <i></i>
+                                <b>广东</b>
+                                <span></span>
+                            </div>
+                            <div class="ICityList city_select none">
+                                <dl>
+                                    <dt>华东地区：</dt>
+                                    <dd>
+                                        <a href="javascript:SetCity(31);" id="p_31" class="">上海</a>
+                                        <a href="javascript:SetCity(32);" id="p_32">江苏</a>
+                                        <a href="javascript:SetCity(33);" id="p_33">浙江</a>
+                                        <a href="javascript:SetCity(34);" id="p_34">安徽</a>
+                                        <a href="javascript:SetCity(37);" id="p_37">山东</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>华北东北：</dt>
+                                    <dd>
+                                        <a href="javascript:SetCity(11);" id="p_11">北京</a>
+                                        <a href="javascript:SetCity(12);" id="p_12">天津</a>
+                                        <a href="javascript:SetCity(13);" id="p_13">河北</a>
+                                        <a href="javascript:SetCity(14);" id="p_14" class="selected">山西</a>
+                                        <a href="javascript:SetCity(15);" id="p_15">内蒙古</a>
+                                        <a href="javascript:SetCity(21);" id="p_21">辽宁</a>
+                                        <a href="javascript:SetCity(22);" id="p_22">吉林</a>
+                                        <a href="javascript:SetCity(23);" id="p_23">黑龙江</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>华南西南：</dt>
+                                    <dd>
+                                        <a href="javascript:SetCity(44);" id="p_44" class="current">广东</a>
+                                        <a href="javascript:SetCity(45);" id="p_45">广西</a>
+                                        <a href="javascript:SetCity(46);" id="p_46">海南</a>
+                                        <a href="javascript:SetCity(35);" id="p_35">福建</a>
+                                        <a href="javascript:SetCity(51);" id="p_51">四川</a>
+                                        <a href="javascript:SetCity(50);" id="p_50">重庆</a>
+                                        <a href="javascript:SetCity(52);" id="p_52">贵州</a>
+                                        <a href="javascript:SetCity(53);" id="p_53">云南</a>
+                                        <a href="javascript:SetCity(54);" id="p_54">西藏</a>
+                                    </dd>
+                                </dl>
+                                <dl class="last">
+                                    <dt>华中西北：</dt>
+                                    <dd class="nobor">
+                                        <a href="javascript:SetCity(42);" id="p_42">湖北</a>
+                                        <a href="javascript:SetCity(43);" id="p_43">湖南</a>
+                                        <a href="javascript:SetCity(41);" id="p_41">河南</a>
+                                        <a href="javascript:SetCity(36);" id="p_36">江西</a>
+                                        <a href="javascript:SetCity(61);" id="p_61">陕西</a>
+                                        <a href="javascript:SetCity(62);" id="p_62">甘肃</a>
+                                        <a href="javascript:SetCity(63);" id="p_63">青海</a>
+                                        <a href="javascript:SetCity(64);" id="p_64">宁夏</a>
+                                        <a href="javascript:SetCity(65);" id="p_65">新疆</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="toolbar-right">
+                        <li><a href="../html/boqiilogin.html" class="logindex">登录</a>
+                            <a href="" class="out">退出</a> 
+                        </li>
+                        <li><a href="../html/boqiireg.html" class="regdex">注册</a></li>
+                        <li class="wb-li">
+                            <a href="">
+                                <em class="weibo"></em>
+                                微博
+                            </a>
+                            <div class="wb_select">
+                                <img src="../img/mainimg/wb.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="wx-li">
+                            <em class="weixin"></em>
+                            微信
+                            <div class="wx_select">
+                                <img src="../img/mainimg/wchat.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="ph-li">
+                            <a href="" class="phone">
+                                <em class="iconfont icon-shouji" style="color: black"></em>
+                                手机版
+                            </a>
+                            <dl class="tel">
+                                <dt><img src="../img/mainimg/tel.jpg"></dt>
+                                <dd class="name">波奇宠物APP</dd>
+                                <dd style="font-size:12px;">注册享270，首单送330</dd>
+                                <dd><a class="iphone left" target="_blank"
+                                        href="https://itunes.apple.com/cn/app/%E6%B3%A2%E5%A5%87%E5%AE%A0%E7%89%A9plus-%E7%B2%BE%E9%80%89%E5%85%A8%E7%90%83%E5%AE%A0%E7%89%A9%E7%94%A8%E5%93%81%E5%95%86%E5%9F%8E/id1398653068?mt=8"></a>
+                                </dd>
+                                <dd><a class="android left" target="_blank"
+                                        href="http://a.boqiicdn.com/App/boqii_4_3.apk"></a></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="top_auto">
+                    <div class="ltop_auto">
+                        <img src="../img/goodslistimg/shopnewlogo.png" alt="">
+                    </div>
+                    <div class="mtop_auto">
+                        <div class="search-box">
+                            <p class="search-l">
+                                <input type="text" name="" id="search" placeholder="请输入关键字">
+                            </p>
+
+                            <input type="button" value="搜索" class="search-btn">
+                        </div>
+                        <p class="search-hot">热门搜索：
+                            <a href="">宠物用品</a>
+                            <a href="">狗粮</a>
+                            <a href="">比熊</a>
+                            <a href="">贵宾</a>
+                            <a href="">金毛</a>
+                            <a href="">哈士奇</a>
+                            <a href="">贵宾犬</a>
+                            <a href="">雪纳瑞</a>
+                            <a href="">更多>></a>
+                        </p>
+                    </div>
+                    <div class="rtop_auto">
+                        <img src="../img/goodslistimg/ad2.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div class="content">
+                    <div class="nav">
+                        <ul class="nav-list">
+                            <li class="active1 lis1">
+                                <a href="">全部商品分类
+                                    <em></em>
+                                </a>
+                            </li>
+                            <li><a href="../boqimain.html">首页</a></li>
+                            <li><a href="">狗狗<i></i></a>
+                                <div class="nav2_one">
+                                    <div class="nav2_left">
+                                        <dl>
+                                            <dt><a href="">狗狗商城>></a></dt>
+                                            <dd><a href="http://shop.boqii.com/dog/list-621-0-0-0.html"
+                                                    target="_blank">宠物狗粮</a><a
+                                                    href="http://shop.boqii.com/dog/list-629-0-0-0.html"
+                                                    target="_blank">狗狗零食</a><a
+                                                    href="http://shop.boqii.com/dog/list-898-0-0-0-0-0.html"
+                                                    target="_blank">罐头湿粮</a><a
+                                                    href="http://shop.boqii.com/dog/list-634-0-0-0.html"
+                                                    target="_blank">狗狗保健品</a><a
+                                                    href="http://shop.boqii.com/dog/list-640-0-0-0.html"
+                                                    target="_blank">狗狗医疗</a><a
+                                                    href="http://shop.boqii.com/dog/list-875-0-0-0-0-5.html"
+                                                    target="_blank">狗狗出行</a><a
+                                                    href="http://shop.boqii.com/dog/list-656-0-0-0.html"
+                                                    target="_blank">狗狗日用品</a><a
+                                                    href="http://shop.boqii.com/dog/list-662-0-0-0.html"
+                                                    target="_blank">狗狗美容</a><a
+                                                    href="http://shop.boqii.com/dog/list-668-0-0-0.html"
+                                                    target="_blank">狗狗玩具</a><a
+                                                    href="http://shop.boqii.com/dog/list-921-0-0-0-0-5.html"
+                                                    target="_blank">狗狗住所</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="http://www.boqii.com/baike/dog/" target="_blank">狗狗百科 »</a>
+                                            </dt>
+                                            <dd><a href="http://www.boqii.com/entry/detail/449.html"
+                                                    target="_blank">柯基犬</a><a
+                                                    href="http://www.boqii.com/entry/detail/504.html"
+                                                    target="_blank">牛头梗</a><a
+                                                    href="http://www.boqii.com/entry/detail/2503.html"
+                                                    target="_blank">中华田园犬</a><a
+                                                    href="http://www.boqii.com/entry/detail/2516.html"
+                                                    target="_blank">比特犬</a><a
+                                                    href="http://www.boqii.com/entry/detail/368.html"
+                                                    target="_blank">比熊犬</a><a
+                                                    href="http://www.boqii.com/entry/detail/347.html"
+                                                    target="_blank">博美犬</a><a
+                                                    href="http://www.boqii.com/entry/detail/449.html"
+                                                    target="_blank">柯基</a><a
+                                                    href="http://www.boqii.com/entry/detail/350.html"
+                                                    target="_blank">边境牧羊犬</a><a
+                                                    href="http://www.boqii.com/entry/detail/332.html"
+                                                    target="_blank">金毛</a><a
+                                                    href="http://www.boqii.com/entry/detail/485.html"
+                                                    target="_blank">秋田犬</a><a
+                                                    href="http://www.boqii.com/entry/detail/613.html"
+                                                    target="_blank">柴犬</a><a
+                                                    href="http://www.boqii.com/entry/detail/357.html"
+                                                    target="_blank">哈士奇</a><a href="http://www.boqii.com/pet-all/dog/"
+                                                    target="_blank">狗狗大全</a><a href="http://www.boqii.com/baike/dogfd/"
+                                                    target="_blank">狗狗饲养</a><a href="http://www.boqii.com/baike/dogtn/"
+                                                    target="_blank">狗狗训练</a><a href="http://www.boqii.com/baike/dogmd/"
+                                                    target="_blank">狗狗医疗</a><a
+                                                    href="http://www.boqii.com/baike/discuss-0/"
+                                                    target="_blank">问答专区</a></dd>
+                                        </dl>
+                                        <dl class="mt20">
+                                            <dt><a href="http://bbs.boqii.com/plate/quanyou.html" target="_blank">狗狗论坛
+                                                    »</a></dt>
+                                            <dd><a href="http://bbs.boqii.com/forum/hashiqi/" target="_blank">哈士奇</a><a
+                                                    href="http://bbs.boqii.com/forum/samo/" target="_blank">萨摩</a><a
+                                                    href="http://bbs.boqii.com/forum/guibin/" target="_blank">贵宾犬</a><a
+                                                    href="http://bbs.boqii.com/forum/bixiong/" target="_blank">比熊犬</a><a
+                                                    href="http://bbs.boqii.com/forum/jinmao/"
+                                                    target="_blank">金毛/拉布拉多</a><a
+                                                    href="http://bbs.boqii.com/forum/sumu/" target="_blank">苏牧/喜乐蒂</a><a
+                                                    href="http://bbs.boqii.com/forum/xuenairui/"
+                                                    target="_blank">雪纳瑞</a><a href="http://bbs.boqii.com/forum/xishi/"
+                                                    target="_blank">西施犬/京巴犬</a><a
+                                                    href="http://bbs.boqii.com/forum/hunxueer/"
+                                                    target="_blank">混血儿论坛</a><a
+                                                    href="http://bbs.boqii.com/forum/qitaquanyou/"
+                                                    target="_blank">其他</a></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="nav2_right">
+                                        <dl>
+                                            <dt>
+                                                <a href="http://shop.boqii.com/dog/list-621-677-0-0.html">
+                                                    <img src="../img/mainimg/img57721417751190.jpg" alt="">
+                                                </a>
+                                            </dt>
+                                            <dd><a href="http://shop.boqii.com/dog/list-621-677-0-0.html"
+                                                    target="_blank">佩玛思特进口犬粮</a></dd>
+                                            <dd>进口原料 健康品质</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li><a href="">猫咪<i></i></a>
+                                <div class="nav2_one">
+                                    <div class="nav2_left">
+                                        <dl>
+                                            <dt><a href="http://shop.boqii.com/cat/" target="_blank">猫咪商城 »</a></dt>
+                                            <dd><a href="http://shop.boqii.com/cat/list-576-0-0-0.html"
+                                                    target="_blank">宠物猫粮</a><a
+                                                    href="http://shop.boqii.com/cat/list-902-0-0-0-0-0.html"
+                                                    target="_blank">猫罐头/妙鲜包</a><a
+                                                    href="http://shop.boqii.com/cat/list-585-0-0-0.html"
+                                                    target="_blank">猫猫零食</a><a
+                                                    href="http://shop.boqii.com/cat/list-588-0-0-0.html"
+                                                    target="_blank">猫猫医疗</a><a
+                                                    href="http://shop.boqii.com/cat/list-596-0-0-0.html"
+                                                    target="_blank">猫猫保健品</a><a
+                                                    href="http://shop.boqii.com/cat/list-932-0-0-0-0-5.html"
+                                                    target="_blank">猫猫香波</a><a
+                                                    href="http://shop.boqii.com/cat/list-608-0-0-0.html"
+                                                    target="_blank">日常用品</a><a
+                                                    href="http://shop.boqii.com/cat/list-614-0-0-0-0-5.html"
+                                                    target="_blank">猫猫玩具</a><a
+                                                    href="http://shop.boqii.com/cat/list-927-0-0-0-0-5.html"
+                                                    target="_blank">猫咪住所</a><a
+                                                    href="http://shop.boqii.com/cat/list-907-0-0-0-0-0.html"
+                                                    target="_blank">猫砂猫厕</a></dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><a href="http://www.boqii.com/baike/cat/" target="_blank">猫咪百科 »</a>
+                                            </dt>
+                                            <dd><a href="http://www.boqii.com/entry/detail/431.html"
+                                                    target="_blank">西伯利亚</a><a
+                                                    href="http://www.boqii.com/entry/detail/353.html"
+                                                    target="_blank">异国短毛猫</a><a
+                                                    href="http://www.boqii.com/entry/detail/330.html"
+                                                    target="_blank">布偶</a><a
+                                                    href="http://www.boqii.com/entry/detail/2513.html"
+                                                    target="_blank">豹猫</a><a
+                                                    href="http://www.boqii.com/entry/detail/343.html"
+                                                    target="_blank">苏格兰折耳猫</a><a
+                                                    href="http://www.boqii.com/entry/detail/364.html"
+                                                    target="_blank">波斯猫</a><a
+                                                    href="http://www.boqii.com/entry/detail/2504.html"
+                                                    target="_blank">中华田园猫</a><a
+                                                    href="http://www.boqii.com/entry/detail/359.html"
+                                                    target="_blank">暹罗猫</a><a
+                                                    href="http://www.boqii.com/entry/detail/330.html"
+                                                    target="_blank">布偶猫</a><a href="http://www.boqii.com/pet-all/cat/"
+                                                    target="_blank">猫咪大全</a><a href="http://www.boqii.com/baike/catfd/"
+                                                    target="_blank">猫咪饲养</a><a href="http://www.boqii.com/baike/cattn/"
+                                                    target="_blank">猫咪训练</a><a href="http://www.boqii.com/baike/catmd/"
+                                                    target="_blank">猫咪医疗</a><a
+                                                    href="http://www.boqii.com/baike/discuss-0/"
+                                                    target="_blank">问答专区</a></dd>
+                                        </dl>
+                                        <dl class="mt20">
+                                            <dt><a href="http://bbs.boqii.com/plate/maoyou.html" target="_blank">猫咪论坛
+                                                    »</a></dt>
+                                            <dd><a href="http://bbs.boqii.com/forum/maoyou/" target="_blank">猫咪论坛</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    <div class="nav2_right">
+                                        <dl class="nav_list_r mt10">
+                                            <dt><a href="http://shop.boqii.com/cat/list-576-677-0-0.html"
+                                                    target="_blank"><img
+                                                        src="http://img.boqiicdn.com/Data/U/P/img69501417751239.jpg"
+                                                        alt="佩玛思特进口猫粮"></a></dt>
+                                            <dd><a href="http://shop.boqii.com/cat/list-576-677-0-0.html"
+                                                    target="_blank">佩玛思特进口猫粮</a></dd>
+                                            <dd>高品质蛋白质营养</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="">小宠<i></i></a>
+                                <div class="nav2_one">
+                                    <div class="nav2_left">
+                                        <dl>
+                                            <dt><a href="http://shop.boqii.com/small/" target="_blank">小宠商城 »</a></dt>
+                                            <dd><a href="http://shop.boqii.com/small/list-685-0-0-0.html"
+                                                    target="_blank">兔兔用品</a><a
+                                                    href="http://shop.boqii.com/small/list-686-0-0-0.html"
+                                                    target="_blank">仓鼠用品</a><a
+                                                    href="http://shop.boqii.com/small/list-687-0-0-0.html"
+                                                    target="_blank">龙猫用品</a><a
+                                                    href="http://shop.boqii.com/small/list-704-0-0-0.html"
+                                                    target="_blank">天竺鼠用品</a></dd>
+                                        </dl>
+                                        <dl style="width:120px">
+                                            <dt><a href="http://www.boqii.com/baike/small/" target="_blank">小宠百科 »</a>
+                                            </dt>
+                                            <dd><a href="http://www.boqii.com/entry/detail/780.html"
+                                                    target="_blank">亚历山大</a><a
+                                                    href="http://www.boqii.com/entry/detail/1294.html"
+                                                    target="_blank">松鼠</a><a
+                                                    href="http://www.boqii.com/entry/detail/1015.html"
+                                                    target="_blank">鹦鹉</a><a
+                                                    href="http://www.boqii.com/entry/detail/2508.html"
+                                                    target="_blank">变色龙</a><a
+                                                    href="http://www.boqii.com/entry/detail/1363.html"
+                                                    target="_blank">八哥</a><a
+                                                    href="http://www.boqii.com/entry/detail/2509.html"
+                                                    target="_blank">狐狸</a><a
+                                                    href="http://www.boqii.com/pet-all/smallpet/"
+                                                    target="_blank">小宠大全</a><a href="http://www.boqii.com/baike/spetfd/"
+                                                    target="_blank">小宠饲养</a><a href="http://www.boqii.com/baike/spettn/"
+                                                    target="_blank">小宠训练</a><a href="http://www.boqii.com/baike/spetmd/"
+                                                    target="_blank">小宠医疗</a><a
+                                                    href="http://www.boqii.com/baike/discuss-0/"
+                                                    target="_blank">问答专区</a></dd>
+                                        </dl>
+                                        <dl class="mt20">
+                                            <dt><a href="http://bbs.boqii.com/plate/xiaochong.html" target="_blank">小宠论坛
+                                                    »</a></dt>
+                                            <dd><a href="http://bbs.boqii.com/forum/xiaochong/"
+                                                    target="_blank">小宠水族论坛</a></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="nav2_right">
+                                        <dl class="nav_list_r mt10">
+                                            <dt><a href="http://shop.boqii.com/product-7045.html" target="_blank"><img
+                                                        src="http://img.boqiicdn.com/Data/U/P/img90881417139933.jpg"
+                                                        alt="MA29玛莎仓鼠粮食500g"></a></dt>
+                                            <dd><a href="http://shop.boqii.com/product-7045.html"
+                                                    target="_blank">MA29玛莎仓鼠粮食500g</a></dd>
+                                            <dd>仓鼠首选粮</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="">水族<i></i></a>
+                                <div class="nav2_one">
+                                    <div class="nav2_left">
+                                        <dl>
+                                            <dt><a href="http://shop.boqii.com/fish/" target="_blank">水族商城 »</a></dt>
+                                            <dd><a href="http://shop.boqii.com/fish/list-483-0-0-0.html"
+                                                    target="_blank">鱼缸/水族箱</a><a
+                                                    href="http://shop.boqii.com/fish/list-712-0-0-0.html"
+                                                    target="_blank">鱼饲料</a><a
+                                                    href="http://shop.boqii.com/fish/list-713-0-0-0.html"
+                                                    target="_blank">过滤器</a><a
+                                                    href="http://shop.boqii.com/fish/list-714-0-0-0.html"
+                                                    target="_blank">过滤材料</a><a
+                                                    href="http://shop.boqii.com/fish/list-715-0-0-0.html"
+                                                    target="_blank">潜水泵</a><a
+                                                    href="http://shop.boqii.com/fish/list-716-0-0-0.html"
+                                                    target="_blank">氧气泵</a><a
+                                                    href="http://shop.boqii.com/fish/list-717-0-0-0.html"
+                                                    target="_blank">增氧配件</a><a
+                                                    href="http://shop.boqii.com/fish/list-718-0-0-0.html"
+                                                    target="_blank">照明器材</a><a
+                                                    href="http://shop.boqii.com/fish/list-719-0-0-0.html"
+                                                    target="_blank">温控设备</a><a
+                                                    href="http://shop.boqii.com/fish/list-721-0-0-0.html"
+                                                    target="_blank">清洁用具</a><a
+                                                    href="http://shop.boqii.com/fish/list-720-0-0-0.html"
+                                                    target="_blank">药水系列</a><a
+                                                    href="http://shop.boqii.com/fish/list-722-0-0-0.html"
+                                                    target="_blank">造景装饰</a><a
+                                                    href="http://shop.boqii.com/fish/list-723-0-0-0.html"
+                                                    target="_blank">水草肥料</a><a
+                                                    href="http://shop.boqii.com/fish/list-724-0-0-0.html"
+                                                    target="_blank">杀菌灯</a><a
+                                                    href="http://shop.boqii.com/fish/list-725-0-0-0.html"
+                                                    target="_blank">喂食器</a></dd>
+                                        </dl>
+                                        <dl style="width:120px">
+                                            <dt><a href="http://www.boqii.com/baike/fish/" target="_blank">水族百科 »</a>
+                                            </dt>
+                                            <dd><a href="http://www.boqii.com/entry/detail/346.html"
+                                                    target="_blank">锦鲤</a><a
+                                                    href="http://www.boqii.com/entry/detail/338.html"
+                                                    target="_blank">金鱼</a><a
+                                                    href="http://www.boqii.com/entry/detail/344.html"
+                                                    target="_blank">宝莲灯</a><a
+                                                    href="http://www.boqii.com/entry/detail/980.html"
+                                                    target="_blank">清道夫</a><a
+                                                    href="http://www.boqii.com/pet-all/aquarium/"
+                                                    target="_blank">水族大全</a><a href="http://www.boqii.com/baike/aqfd/"
+                                                    target="_blank">水族饲养</a><a href="http://www.boqii.com/baike/aqmd/"
+                                                    target="_blank">水族医疗</a><a
+                                                    href="http://www.boqii.com/baike/discuss-0/"
+                                                    target="_blank">问答专区</a></dd>
+                                        </dl>
+                                        <dl class="mt20">
+                                            <dt><a href="http://bbs.boqii.com/plate/xiaochong.html" target="_blank">水族论坛
+                                                    »</a></dt>
+                                            <dd><a href="http://bbs.boqii.com/forum/xiaochong/"
+                                                    target="_blank">小宠水族论坛</a></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="nav2_right">
+                                        <dl class="nav_list_r mt10">
+                                            <dt><a href="http://shop.boqii.com/product-6824.html" target="_blank"><img
+                                                        src="http://img.boqiicdn.com/Data/U/P/img86981417140603.jpg"
+                                                        alt="三元锦鲤鱼增色饲料300g"></a></dt>
+                                            <dd><a href="http://shop.boqii.com/product-6824.html"
+                                                    target="_blank">三元锦鲤鱼增色饲料300g</a></dd>
+                                            <dd>专为金鱼和锦鲤而设计</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="">爬虫<i></i></a>
+                                <div class="nav2_one">
+                                    <div class="nav2_left">
+                                        <dl>
+                                            <dt><a href="http://shop.boqii.com/list-407-0-0-0.html" target="_blank">爬虫商城
+                                                    »</a></dt>
+                                            <dd><a href="http://shop.boqii.com/reptile/list-556-0-0-0.html"
+                                                    target="_blank">龟粮</a><a
+                                                    href="http://shop.boqii.com/reptile/list-555-0-0-0.html"
+                                                    target="_blank">龟箱</a><a
+                                                    href="http://shop.boqii.com/reptile/list-566-0-0-0.html"
+                                                    target="_blank">龟缸</a><a
+                                                    href="http://shop.boqii.com/reptile/list-567-0-0-0.html"
+                                                    target="_blank">灯具</a><a
+                                                    href="http://shop.boqii.com/reptile/list-570-0-0-0.html"
+                                                    target="_blank">医疗保健用品</a><a
+                                                    href="http://shop.boqii.com/reptile/list-571-0-0-0.html"
+                                                    target="_blank">造景</a><a
+                                                    href="http://shop.boqii.com/reptile/list-572-0-0-0.html"
+                                                    target="_blank">食具</a><a
+                                                    href="http://shop.boqii.com/reptile/list-573-0-0-0.html"
+                                                    target="_blank">躲避台</a><a
+                                                    href="http://shop.boqii.com/reptile/list-574-0-0-0.html"
+                                                    target="_blank">温控</a><a
+                                                    href="http://shop.boqii.com/reptile/list-564-0-0-0.html"
+                                                    target="_blank">垫材</a><a
+                                                    href="http://shop.boqii.com/reptile/list-565-0-0-0.html"
+                                                    target="_blank">配件</a></dd>
+                                        </dl>
+                                        <dl style="width:120px">
+                                            <dt><a href="http://bbs.boqii.com/plate/xiaochong.html" target="_blank">爬虫论坛
+                                                    »</a></dt>
+                                            <dd><a href="http://bbs.boqii.com/plate/xiaochong.html"
+                                                    target="_blank">爬虫论坛</a></dd>
+                                        </dl>
+                                        <dl class="mt20">
+                                            <dt><a href="http://www.boqii.com/baike/reptile/" target="_blank">爬虫百科
+                                                    »</a>
+                                            </dt>
+                                            <dd><a href="http://www.boqii.com/pet-all/reptile/"
+                                                    target="_blank">爬虫大全</a><a href="http://www.boqii.com/baike/rptfd/"
+                                                    target="_blank">爬虫饲养</a><a href="http://www.boqii.com/baike/rptmd/"
+                                                    target="_blank">爬虫医疗</a><a
+                                                    href="http://www.boqii.com/baike/discuss-0/"
+                                                    target="_blank">问答专区</a></dd>
+                                        </dl>
+                                    </div>
+                                    <div class="nav2_right">
+                                        <dl class="nav_list_r mt10">
+                                            <dt><a href="http://shop.boqii.com/product-9382.html" target="_blank"><img
+                                                        src="http://img.boqiicdn.com/Data/U/P/img80591427681476.jpg"
+                                                        alt="水龟维他命营养维生素50g"></a></dt>
+                                            <dd><a href="http://shop.boqii.com/product-9382.html"
+                                                    target="_blank">水龟维他命营养维生素50g</a></dd>
+                                            <dd>提高免疫力</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href=""><em class="nav_service"></em>
+                                    波奇服务</a></li>
+                            <li><a href=""><em class="nav_shop"></em>
+                                    波奇商城</a></li>
+                        </ul>
+                        <div class="wap">
+                            <a href="">
+                                <em class="iconfont icon-shouji"></em>
+                                波奇无限
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="body-top">
+            <div class="content">
+                <a href="">波奇商城</a> >
+                <a href="">品牌馆</a> >
+                <span>伯纳天纯</span>
+            </div>
+        </div>
+        <div class="brand_d_top">
+            <div class="content">
+                <div class="brand_d_top_l">
+                    <img src="../img/goodslistimg/shopbrand_big_pic41555642250.jpg" alt="">
+                </div>
+                <div class="brand_d_top_r">
+                    <h3>伯纳天纯</h3>
+                    <div class="shouquan">
+                        <a href="">
+                            <i>
+                                品牌官方授权
+                            </i>
+                            <img src="../img/goodslistimg/shopauthorize_pic1546521548.jpg" alt="">
+                        </a>
+                        <span> 50款在售</span>
+                    </div>
+                    <div class="brand_attent">
+                        <a href="">关注品牌</a>
+                        <span>1842人关注</span>
+                    </div>
+                    <div class="bran_top_right">
+                        <img src="../img/goodslistimg/shopbrand_logo1431134552_thumb.jpg" alt="">
+                    </div>
+                    <div class="story-b">
+                        <h4>品牌故事</h4>
+                        <p>伯纳天纯是美国创为生物技术有限公司旗下品牌，2013年正式进入中国，一直以来坚持生产天然无谷粮，拥有独创专利冷加工技术确保粮食营养。2014年一跃成为国内无谷粮市场第一品牌，拥有线下5000家门店合作在售，天然粮销量成绩傲人！伯纳天纯粮食生产全程37道工序，134个控制关键点，遵循HACCP控制流程，在保证产品安全卫生的同时，最大限度保留优质原料营养。在北美和欧洲，无谷粮已经成为各大犬粮企业主推的产品。在WDJ的狗粮推荐名单中，无谷粮的比例早已大幅超越天然粮。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="brand_d_coupon">
+                <ul class="coupon_list">
+                    <li data-prefix="RTJ" class="c-get">
+                        <div class="c-condition">
+                            <span class="price-icon"> ¥ </span><span class="price">100 </span><span
+                                class="detail">新人首单100元券</span>
+                        </div>
+                        <div class="c-status">
+                            <span>领取</span>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="brand_d_bot">
+                <div class="cate_box">
+                    <ul class="cate-list">
+                        <li class="brand_all " id="0" style="color: rgb(238, 85, 51);">全部</li>
+                        <li>
+                            猫咪主粮
+                            <ul class="cate-list2">
+                                <li>国产粮</li>
+                                <li>幼猫粮</li>
+                            </ul>
+                        </li>
+                        <li>
+                            狗狗主粮
+                            <ul class="cate-list2">
+                                <li>国产粮</li>
+                                <li>幼犬粮</li>
+                                <li>成犬粮</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sort">
+                    <div class="sort_left">
+                        <span>排序:</span>
+                        <a href="###" class="active synthesize">综合排序</a>
+                        <a href="###" class="sort-sold"><span>销量</span><i class="icons icon_up"></i></a>
+
+
+
+                        <a href="###" class="sort-order"><span>价格</span><i class="icons icon_down_up"></i></a>
+
+                        <a href="###" class="sort-new"><span>新品</span><i class="icons icon_down"></i></a>
+
+                        <a href="###" class="sort-comment"><span>评论</span><i class="icons icon_down"></i></a>
+
+                        <span class="sort_box youhuo"><i class="left"></i><em>有货</em></span>
+                        <span class="sort_box cuxiao"><i class="left"></i><em>促销</em></span>
+
+                    </div>
+                    <div class="sort_right">
+                        <div class="sort_right_left">
+                            <span class="product_total"></span>
+                            <span class="product_page">
+                                <em class="product_page_current"></em>/<em class="product_page_total"></em>
+                            </span>
+                        </div>
+                        <div class="sort_right_right">
+                            <a href="###" title="上一页" class="prev_page disabled"> &lt; </a>
+                            <a href="###" title="下一页" class="next_page"> &gt;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 商品列表 -->
+            <div class="goods">
+                <ul class="product_list">
+                    <!-- <li>
+                                <a href="" class=".showimg-a">
+                                    <img src="../img/goodslistimg/shoppicpath11540361112_m.jpg" alt="" class="showimg">
+                                </a>
+                                <h3>￥839</h3>
+                                <p class="title">伯纳天纯 草原红肉高能活力配方无谷天然全犬粮 17kg</p>
+                                <div class="product_status">
+                                    <a href="">
+                                        已有
+                                        <i>90</i>
+                                        人评价
+                                    </a>
+                                    <span>
+                                        已售1580
+                                    </span>
+                                </div>
+                                <div class="operation">
+                                    <span class="add-cart">
+                                        <i class="icons icon_cart"></i>
+                                        加入购物车
+                                    </span>
+                                    <span class="do_attention">
+                                        <i class="icons icon_fav"></i>
+                                        关注
+                                    </span>
+                                </div>
+                            </li> -->
+                </ul>
+            </div>
+            <!-- 分页 -->
+            <div class="page-box">
+                <div class="pagination">
+                    <a href="###" title="首页" class="first_page">首页</a>
+                    <a href="###" title="上一页" class="prev_page"> &lt;
+                        上一页</a>
+                    <div class="page-num">
+                        <!-- <a href="###" title="转到第1页">1</a>
+                        <a href="###" title="转到第2页" class="active">2</a>
+                        <a href="###" title="转到第3页">3</a> -->
+                    </div>
+
+                    <a href="###" title="下一页" class="next_page"> 下一页
+                        &gt; </a>
+                    <a href="###" title="末页" class="last-page">末页</a>
+                    <span class="total_page">
+                        共<em id="totalPages"></em>
+                        页
+                    </span>
+                    <span>到第&nbsp;<input type="text" class="go_page_text">&nbsp;&nbsp;页
+                    </span>
+                    <input type="button" id="goPages" value="确定" class="go_page_button">
+                </div>
+            </div>
+        </div>
+
+        <!-- 侧栏 -->
+        <div id="sider">
+            <ul class="sider-list">
+                <li>
+                    <i class="lis-i1"></i>
+                </li>
+                <li class="shop_cart">
+                    <i class="shop-cart-i"></i>
+                    <span class="sbar_cart_text">购物车</span>
+                    <i class="bg-cart">1</i>
+                </li>
+                <li>
+                    <i class="zican"></i>
+                    <span>资产</span>
+                </li>
+                <li>
+                    <i class="com"></i>
+                    <span>收藏</span>
+                </li>
+                <li>
+                    <i class="zixun"></i>
+                    <span>咨询</span>
+                </li>
+                <li>
+                    <i class="phapp"></i>
+                    <span>APP</span>
+                </li>
+                <li class="gotop">
+                    <a href="#001">
+                        <i class="gotop-i"></i>
+                        <span>TOP</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <footer></footer>
+        <div class="buy-tips J-buyTips">
+            <div class="buy-tips-body">
+                <div class="buy-tips-module">
+                    <div class="buy-tips-close J-buyTipsClose"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

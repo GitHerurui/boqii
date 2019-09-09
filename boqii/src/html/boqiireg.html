@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>boqiireg</title>
+    <link rel="stylesheet" href="../css/boqiireg.css">
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <div class="content">
+                <ul>
+                    <li><a href="">波奇网</a></li>
+                    <li><a href="">波奇商城</a></li>
+                    <li><a href="">波奇服务</a></li>
+                    <li><a href="">波奇论坛</a></li>
+                    <li><a href="">波奇百科</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="body">
+            <div class="content">
+                <div class="logo-b">
+                    <a href="">
+                        <img src="../img/mainimg/logo2.png" alt="">
+                    </a>
+                    <h1>用户注册</h1>
+                    <div class="has_number">
+                        已有波奇账号，<a href="">直接登录</a>
+                    </div>
+                </div>
+                <div class="gl_body">
+                    <div class="reg_l left">
+                        <div class="reg_l_tag">
+                            <div class="reg_l_t_list current left"><em></em>手机注册</div>
+                        </div>
+                        <div>
+                            <div class="tag_body">
+                                <form action="">
+                                    <div class="forget_list">
+                                        <span>手机号码：</span>
+                                        <div class="yzm borderd"><input type="text" id="mobile" name="mobile"
+                                                class="w230" style="color:#ccc;" placeholder="请输入手机号码
+                                                " maxlength="11">
+                                        </div>
+                                        <div class="k_em">
+                                            <div class="tip" id="mobile_tip" style="display:none">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="forget_list">
+                                        <span>设置密码：</span>
+                                        <div class="yzm borderd">
+                                            <input type="password" id="m_password" name="m_password" class="w230"
+                                                style="color:#ccc;" placeholder="6-20大小写英文字母、数字或符号">
+                                        </div>
+                                        <div class="k_em">
+                                            <div class="tip" id="m_password_tip" style="display:none;">
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="forget_list">
+                                        <span>确认密码：</span>
+                                        <div class="yzm borderd">
+                                            <input type="password" id="m_repassword" name="m_repassword" class="w230"
+                                                style="color:#ccc;" placeholder="请再次输入密码">
+                                        </div>
+                                        <div class="k_em">
+                                            <div class="tip" id="m_repassword_tip" style="display:none;">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="forget_list">
+                                        <span>昵称：</span>
+                                        <div class="yzm borderd">
+                                            <input type="text" id="m_nickname" name="m_nickname" class="w230"
+                                                style="color:#ccc;" placeholder="请输入昵称">
+                                        </div>
+                                        <div class="k_em">
+                                            <div class="tip suc" id="m_nickname_tip" style="display:none;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="forget_list">
+                                        <span>验证码：</span>
+                                        <div class="yzm borderd">
+                                            <input type="text" id="m_verify" name="seccodeverify" class="w80" value="">
+                                            <input type="hidden" id="sign" name="sign" value="1567409767780881">
+                                            <div class="k_em">
+                                                <div class="tip" id="m_verify_tip" style="display:none;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="image-code-box">
+                                                <canvas width="120px" height="40px" id="captcha">               
+                                                </canvas>
+                                                <!-- <div class="form-group__message">验证码不能为空</div> -->
+                                            </div>
+                                            <!-- <div class="change" id="update_temps1">
+                                                <a href="###">看不清？换一张</a>
+                                            </div> -->
+                                    </div>
+                                    <div class="forget_list">
+                                        <span>短信验证码：</span>
+                                        <div class="yzm borderd">
+                                            <input type="text" id="jym_code" name="jym_code" class="w80" value="">
+                                            <div class="k_em">
+                                                <div class="tip suc" id="jym_code_tip" style="display:none;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="get_message tip" id="dhuoqu" style="display:block;">
+                                            获取短信验证码
+                                        </div>
+                                        <div class="get_message" id="huoqu" style="display:none;">
+                                            获取短信验证码
+                                        </div>
+                                        <div class="send_text login_bind_other none" id="send_tip">
+                                            校验码发送成功，
+                                            <strong id="time">78
+                                            </strong> 秒后可重新获取<br>收不到短信验证码？试试 <a href="javascript:void(0);"
+                                                id="show-voice">语音播报
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="forget_list">
+                                        <span>&nbsp;
+
+                                        </span>
+                                        <label class="xieyi left">
+                                            <input type="checkbox" name="checkbox" id="m_checkbox"> 我已阅读并同意
+                                            <a target="_blank" style="color:#3366cc;"
+                                                href="http://www.boqii.com/user/regagreement">
+                                                《波奇网服务协议》
+                                            </a>
+                                        </label>
+                                    </div>
+                                    <div class="forget_list">
+                                        <span>
+                                            &nbsp;
+                                        </span>
+                                        <div class="login_btn left" style="margin-top:20px;">
+                                            <input type="hidden" name="utm_source" id="utm_source" value="">
+                                            <a href="javascript:void(0);" id="m_register">注 册
+                                            </a>
+                                        </div>
+                                        <div class="k_em" style="margin-top:20px;">
+                                            <div class="tip" id="m_register_tip" style="display:none;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="forget_list"><span>&nbsp;</span></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                 <div class="reg_r right">
+                        <a href="http://shop.boqii.com/zhuanti/1249.html" target="_blank">
+                            <img src="http://a.boqiicdn.com/Images/sitenew/login/reg3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer_auto">
+                    <div class="footer_bot">
+                        <p class="link"><a target="_blank"
+                                href="http://www.boqii.com/about.html">关于波奇</a><span>|</span><a target="_blank"
+                                href="http://www.boqii.com/link.html">友情链接</a><span>|</span><a target="_blank"
+                                href="http://www.boqii.com/joinus.html">诚聘英才</a><span>|</span><a target="_blank"
+                                href="http://www.boqii.com/contact.html">联系我们</a><span>|</span><a target="_blank"
+                                href="http://www.boqii.com/sitemap.html">网站地图</a><span>|</span><a target="_blank"
+                                href="http://www.boqii.com/complaints.html">意见反馈</a><span>|</span><a target="_blank"
+                                href="http://www.boqii.com/help.html">帮助中心</a><span>|</span> 客服热线：400-820-6098
+                        </p>
+                        <p class="beian"><a target="_blank"
+                                href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502004955"><img
+                                    src="http://a.boqiicdn.com/Images/public/beian.png" alt=""> 沪公网安备
+                                31011502004955号
+                            </a><span>|</span><a href="http://www.miibeian.gov.cn/"
+                                target="_blank">沪ICP备13034501号-2</a><span>|</span> &nbsp;增值电信业务经营许可证：
+                            <a href="http://www.miibeian.gov.cn/" target="_blank">沪B2-20140120</a></p>
+                        <p class="copy"> Copyright © 2007-2019 Boqii.com All Rights Reserved 光橙（上海）信息科技有限公司 版权所有
+
+                        </p>
+                        <p class="copy"> 公司地址：上海市浦东新区盛夏路399号亚芯科技园1号楼6楼<span>|</span>公司电话：021-61096226
+
+                        </p>
+                        <p><a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20131022163114962"
+                                target="_blank" rel="nofollow"><img
+                                    src="http://a.boqiicdn.com/Images/public/foot_gs.png" width="100" height="35"></a><a
+                                href="http://www.boqii.com/ads.php" target="_blank" rel="nofollow"><img
+                                    src="http://a.boqiicdn.com/Images/public/foot_cx.png" width="100" height="35"></a><a
+                                href="https://ss.knet.cn/verifyseal.dll?sn=e14111831011556282oicb000000&amp;ct=df&amp;a=1&amp;pa=0.1636424780320953"
+                                target="_blank" rel="nofollow"><img
+                                    src="http://a.boqiicdn.com/Images/public/foot_kx.png" width="100" height="35"></a><a
+                                href="http://www.zx110.org/" target="_blank" rel="nofollow"><img
+                                    src="http://a.boqiicdn.com/Images/public/foot_zx.png" width="100" height="35"></a>
+                        </p>
+                        <p>如网民接到962110电话，请立即接听</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+    </div>
+</body>
+<script src="../lib/jquery-3.4.1.js"></script>
+<script src="../lib/captcha.js"></script>
+<script src="../js/boqiireg.js"></script>
+
+</html>

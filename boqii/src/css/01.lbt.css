@@ -1,0 +1,157 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+/*图片的样式*/
+#box,
+#box2 {
+  width: 500px;
+  height: 300px;
+  background: #d8d8d8;
+  margin: 100px auto;
+  position: relative;
+  overflow: hidden;
+  /*焦点样式*/
+  /*左右按钮样式*/
+}
+
+#box .imglist,
+#box2 .imglist {
+  width: 500px;
+  height: 300px;
+}
+
+#box .imglist li,
+#box2 .imglist li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  font-size: 40px;
+  color: red;
+}
+
+#box .imglist li img,
+#box2 .imglist li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#box .imglist li:nth-child(1),
+#box2 .imglist li:nth-child(1) {
+  background: #0088CC;
+}
+
+#box .imglist li:nth-child(2),
+#box2 .imglist li:nth-child(2) {
+  background: lemonchiffon;
+}
+
+#box .imglist li:nth-child(3),
+#box2 .imglist li:nth-child(3) {
+  background: lavenderblush;
+}
+
+#box .imglist li:nth-child(4),
+#box2 .imglist li:nth-child(4) {
+  background: lightcoral;
+}
+
+#box .imglist li:nth-child(5),
+#box2 .imglist li:nth-child(5) {
+  background: lightcyan;
+}
+
+#box .imglist li:nth-child(6),
+#box2 .imglist li:nth-child(6) {
+  background: lightgreen;
+}
+
+#box .light,
+#box2 .light {
+  width: 500px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  /*background: #ccc;*/
+  text-align: center;
+}
+
+#box .light span,
+#box2 .light span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #d8d8d8;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+  /*让焦点的文字消失的方法*/
+  /*text-indent: -9999px;
+        overflow: hidden;*/
+}
+
+#box .light .active,
+#box2 .light .active {
+  background: orangered;
+  color: #fff;
+}
+
+#box .light .liang,
+#box2 .light .liang {
+  background: lightcoral;
+}
+
+#box .posibtn,
+#box2 .posibtn {
+  width: 500px;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -25px;
+  /*background: #ccc;*/
+}
+
+#box .posibtn p,
+#box2 .posibtn p {
+  width: 50px;
+  height: 50px;
+  background: #0074CC;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
+#box .posibtn p::selection,
+#box2 .posibtn p::selection {
+  background: transparent;
+}
+
+#box .posibtn p:nth-child(1),
+#box2 .posibtn p:nth-child(1) {
+  left: 10px;
+}
+
+#box .posibtn p:nth-child(2),
+#box2 .posibtn p:nth-child(2) {
+  right: 10px;
+}

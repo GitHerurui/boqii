@@ -1,0 +1,667 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+i,em{
+    font-style: normal;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#box{
+    width: 100%;
+    height: 100%;
+   
+}
+.content {
+    width: 1190px;
+    margin: auto;
+    /* background: #ccc; */
+}
+.body-top{
+    height: 38px;
+    line-height: 38px;
+    background: #f3f3f3;
+    font-size: 12px;
+    color: #999;
+    font-family: "SimSun";   
+}
+
+.body-top a {
+    color: #666;
+}
+
+.body-top a:hover {
+    color: #e53;
+}
+
+#shop-b{
+    height: 490px;
+    margin-top: 10px;
+    display: flex;
+}
+
+/* 放大镜样式 */
+.wrap img {
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+}
+
+.wrap {
+	width: 400px;
+	height: 492px;
+}
+#wrap{
+	/* margin-bottom: 50px; */
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.imgs {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+    height: 100%;
+    z-index: 5555;
+}
+
+.wrap .main {
+	position: relative;
+	overflow: hidden;
+	padding: 4px;
+	width: 390px;
+	height: 390px;
+    border: 1px solid #dadada;
+    z-index: 55555;
+}
+.bottom {
+	width: 398px;
+	height: 72px;
+	position: relative;
+	margin: 10px 0;
+}
+
+.bottom p{
+	width: 35px;
+	height: 72px;
+	text-align: center;
+	line-height: 72px;
+	background: #777;
+	/* font-size: 24px; */
+	cursor: pointer;
+	float: left;
+}
+.bottom .prev{
+	margin-right: 5px;
+	background: #ccc;
+}
+
+.box{
+	width: 318px;
+	height: 72px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	margin-right: 5px;
+}
+/* .bottom .prev{
+	position: absolute;
+	left: 0px;
+	top: 0;
+}
+.bottom .next{
+	position: absolute;
+	right:0 ;
+	top: 0;
+} */
+
+.smaller {
+	/* position: relative; */
+	overflow: hidden;
+	width: 400px;
+	height: 72px;
+	/* margin-top: 10px; */
+	transition: all 1s;
+	position: absolute;
+	left: 0;
+    top: 0;
+    z-index: 555;
+}
+
+.smaller li {
+	position: relative;
+	float: left;
+	padding: 2px;
+	width: 64px;
+	height: 64px;
+	border: 2px solid #000;
+	margin-left: 10px;
+	cursor: pointer;
+
+}
+
+.smaller li:first-child {
+	margin-left: 0;
+}
+
+.smaller .current {
+	border-color: #ff6a00;
+}
+
+.biger {
+	position: absolute;
+	overflow: hidden;
+	display: none;
+	left: 410px;
+	width: 400px;
+    height: 400px;
+    z-index: 250000;
+}
+
+.mask {
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 0;
+	width: 200px;
+    height: 200px;
+    background: orangered;
+    opacity: 0.3;
+	/* background: url('../images/mask-bg.png') repeat; */
+	cursor: crosshair;
+}
+
+.biger img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200%;
+	height: 200%;
+}
+
+/* 放大镜样式结束 */
+.shop-cent{
+    width: 520px;
+    margin-left: 20px;
+}
+.shop-cent h3{
+    font: 20px/28px "Microsoft YaHei";
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 26px;
+}
+.price-b{
+   
+    background: #fef8f6;
+    border-top: 1px solid #f3f3f3;
+    padding: 0 10px 10px;
+    height: 93px;
+    font-family: Arial,"SimSun";
+} 
+.price-b ul{
+    display: flex;
+    margin-top: 15px;   
+}
+.price-b ul .boqj{
+    padding-top: 8px;
+    letter-spacing: 4px;
+    width: 80px;
+    text-align: left;
+    color: #666;
+    font-size: 12px;
+}
+.price-b ul .pr{
+    font: 30px/32px "Arial";
+    color: #e53;
+}
+.price-b ul .jin{
+    margin-left: 10px;
+    color: #666;
+    font-size: 14px;
+    line-height: 32px;
+}
+.price-b ul .dou{
+    color: #e53;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.price-b p{
+    margin-top: 15px;
+    text-align: left;
+    color: #666;
+    font-size: 12px;
+    font-family: Arial,"SimSun";
+}
+.price-b p del{
+    font-size: 12px;
+    color:  #999;
+    font-family: Arial,"SimSun";
+}
+.shop_t_c_b {
+    padding: 0 10px;
+    color: #666;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.shop_t_c_b dl {
+    width: 100%;
+    margin-top: 14px;
+    font-family: Arial,"SimSun";
+    font-size: 12px;
+}
+input {
+    outline: 0;
+}
+.shop_t_c_b dl .ps {
+    letter-spacing: 3.7px;
+}
+.shop_t_c_b dl dt {
+    font-size: 12px;
+    float: left;
+    width: 87px;
+    text-align: left;
+    padding: 8px 0 0;
+}
+.shop_t_c_b dl dd {
+    float: left;
+    width: 410px;
+}
+.detail_city {
+    float: left;
+    position: relative;
+    width: 62px;
+    margin: 3px 10px 0 0;
+    min-height: 30px;
+   
+}
+.d_city_tit {
+    width: 64px;
+    height: 28px;
+    padding: 0 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+.d_city_tit span {
+    width: 40px;
+    line-height: 26px;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+.d_city_tit em {
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 11px;
+    width: 9px;
+    height: 5px;
+    background: url(../img/goodslistimg/toolbar.png) no-repeat -22px -61px;
+}
+.d_city_select {
+    position: absolute;
+    z-index:1;
+    left: 0;
+    top: 27px;
+    background: #fff;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.d_city_select span {
+    float: left;
+    padding: 3px 0;
+    margin: 5px 4px 0;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.shop_t_c_b dl dd .support {
+    padding: 10px 0 0 10px;
+}
+.d_city_select{
+    display: none;
+}
+em {
+    color: #e53;
+}
+#cityul span:hover{
+    background: #e53;
+    color: #fff;
+}
+.detail_city:hover .d_city_tit em{
+    background-position: -36px -61px;
+}
+.detail_city:hover .d_city_tit{
+    border-bottom: 1px solid #fff;
+}
+.detail_city:hover .d_city_select{
+    display: block;
+}
+
+.shop_t_c_b dl {
+    width: 100%;
+    margin-top: 14px;
+    font-family: Arial,"SimSun";
+}
+.shop_t_c_b dl dt {
+    float: left;
+    width: 87px;
+    text-align: left;
+    padding: 8px 0 0;
+}
+.shop_t_c_b dl dd {
+    float: left;
+    width: 410px;
+}
+.shop-num{
+    width: 100%;
+    margin-top: 15px;
+    line-height: 28px;
+}
+.num-list{
+    display: flex;
+    font-size: 12px;
+    font-family: Arial,"SimSun";   
+}
+.num-list1{
+   padding: 0 13px 0 10px;
+   letter-spacing: 3px;
+   color: #999;
+}
+.numbtn{
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+.numbtn span{
+    display: inline-block;
+    width: 20px;
+    font-size: 16px;
+    line-height: 28px;
+    padding: 0 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.numbtn input{
+    width: 50px;
+    text-align: center;
+    padding:5px;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.btn-box{
+   display: flex;
+    padding-left: 97px;
+    margin-top: 15px;
+}
+.btn-box input{
+    width: 130px;
+    background: #e53;
+    color: #fff;
+    font: 16px/40px "Microsoft YaHei";
+    cursor: pointer;
+    margin-right: 10px;
+    border: none;
+}
+.btn-box input:hover{
+    background: #c20;
+}
+.addcart{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    background: url(../img/boqiidetails/btn.png)no-repeat;
+}
+.addcart:hover{
+    background-position: 0 -50px;
+}
+.combox{
+    width: 75px;
+    height: 16px;
+    cursor: pointer;
+    margin: 13px 0 0 168px;
+    background: url(../img/boqiidetails/btn.png)no-repeat -163px -12px; 
+}
+
+.combox:hover{
+    background-position: -163px -62px;
+}
+.shop-r{
+    width: 220px;
+    height: 423px;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+}
+.shop-r .r-icon{
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px
+}
+.shop-r .r-icon li{
+    flex: 1;
+    text-align: center;
+    color: #999999;
+    font-size: 12px;
+    padding-top: 5px;
+}
+.shop-r .r-icon li img{
+    border: none;
+    vertical-align: middle;
+}
+.shop-r .r-icon li span{
+    display: block;
+}
+.brand {
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    padding: 10px;
+    color: #666;
+    font-size: 12px;
+    font-family: Arial,"SimSun";
+}
+.brand dl {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.brand dl dt {
+    float: left;
+    width: 60px;
+    text-align: right;
+}
+.brand dl dd {
+    float: left;
+}
+.brand dl a {
+    color: #08d;
+}
+.pl_top {
+    padding: 5px 0 10px;
+    clear: both;
+}
+.score_cont {
+    color: #e53;
+    display: flex;
+    width: 120px;
+}
+.score_cont p{
+    display: flex;
+}
+.index_pf {
+    width: 16px;
+    height: 16px;
+    display: block;
+    background: url(../img/boqiidetails/star-on7.png) no-repeat 0px center;
+}
+.brand ul {
+    border-top: 1px dashed #ccc;
+}
+.brand ul li {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #666;
+    font-family: Arial,"SimSun";
+    vertical-align: middle;
+}
+.sqimg {
+    position: relative;
+    
+}
+.sqimg img{
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: -70px;
+}
+.sqimg:hover img{
+    display: block;
+}
+.brand ul li em {
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    background: url(../img/boqiidetails/icon.png) no-repeat -262px -244px;
+    margin-right: 4px;
+}
+.brand ul li .zxBtn {
+    display: inline-block;
+    width: 90px;
+    height: 28px;
+    background: url(../img/boqiidetails/btn.png) no-repeat 0 -206px;
+    margin-left: 4px;
+}
+.yiwen {
+    display: flex;
+    align-items: center;
+}
+.detail_az {
+    position: static;
+    padding: 10px;
+    width: 208px;
+    border-top: 1px solid #e6e6e6;
+}
+.az dl dd.name {
+    padding: 0;
+    color: #333;
+}
+.az dl dt {
+    float: left;
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+}
+.az dl dd {
+    font: 12px "Microsoft YaHei";
+    padding: 5px 0 0;
+    color: #e53;
+}
+/* 侧栏导航 */
+#sider{
+    width: 36px;
+    height: 100%;
+    position: relative;
+    background: #0c0c0c;
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.sider-list li{   
+    width: 36px;
+    left: 0;
+    position: relative;
+    z-index: 1003;
+    display: block;
+    color: #999999;
+    border-top: 1px solid #343434;
+}
+.sider-list li:hover{
+    background:  #e53 !important;
+}
+.sider-list li i {
+    font-style: normal;
+    background: url(../img/goodslistimg/sbar_ico.png) no-repeat;
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.sider-list li .shop-cart-i{
+    background-position: 0 -36px;
+}
+.sider-list li:hover .shop-cart-i{
+    background-position: -36px -36px;
+}
+.sider-list li .bg-cart{
+    background-position: 0 -249px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+}
+.sider-list li span{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 9px;
+    font-size: 12px;
+    text-align: center;
+}
+.sider-list li a{
+      color: #999999;
+}
+.sider-list li .sbar_cart_text{
+    padding-bottom: 0px;
+    width: 12px;
+}
+.sider-list li:hover span{
+    color: #fff;
+}
+.sider-list li .zican{
+    background-position: 0 -72px;
+}
+.sider-list li:hover .zican{
+    background-position: -36px -72px;
+}
+.sider-list li .com{
+    background-position: 0 -108px;
+}
+.sider-list li:hover .com{
+    background-position: -36px -108px;
+}
+.sider-list li .zixun{
+    background-position: 0 -144px;
+}
+.sider-list li:hover .zixun{
+    background-position: -36px -144px;
+}
+.sider-list li .phapp{
+    background-position: 0 -180px;
+}
+.sider-list li:hover .phapp{
+    background-position: -36px -180px;
+}
+.sider-list li .gotop-i{
+    background-position: 0px -288px;
+}
+.sider-list li:hover .gotop-i{
+    background-position: -36px -288px;
+}
